@@ -5,7 +5,7 @@ project(spiffs)
 function(configure_spiffs CONFIG_FILE_DIR)
 
     add_library(spiffs
-        src/spiffs_config.h
+        ${CONFIG_FILE_DIR}/spiffs_config.h
         src/spiffs.h
         src/spiffs_cache.c
         src/spiffs_check.c
@@ -15,6 +15,6 @@ function(configure_spiffs CONFIG_FILE_DIR)
         src/spiffs_nucleus.h
     )
 
-    target_include_directories(spiffs PUBLIC src/)
+    target_include_directories(spiffs PUBLIC src/ ${CONFIG_FILE_DIR})
 
 endfunction()
