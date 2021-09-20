@@ -25,6 +25,7 @@ set(SPIFFS_INCLUDE_DIRECTORIES
 function(configure_spiffs CONFIG_FILE_DIR)
 
     add_library(spiffs
+        EXCLUDE_FROM_ALL
         ${SPIFFS_SOURCES}
         ${SPIFFS_INCLUDES}
         ${CONFIG_FILE_DIR}/spiffs_config.h
